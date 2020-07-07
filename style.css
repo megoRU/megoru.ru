@@ -149,6 +149,10 @@
 		opacity: 0.7;
 		transition: opacity .1s;
 	}
+	
+	#copyright p {
+		margin-top: -20px;
+	}
 
 	svg:hover {
 		opacity: 0.7;
@@ -186,7 +190,7 @@
 	
 	@media (min-height: 625px) {
 	#copyright {
-		margin-top: -41px;
+		margin-top: -20px;
 		}
 	}
 	
