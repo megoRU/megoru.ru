@@ -65,7 +65,7 @@
 		font-size: 40px;
 		font-weight: 400;
 		margin: 0;
-		margin-top: -43px;
+		margin-top: 0px;
 		color: #fff;
 	}
 
@@ -84,32 +84,32 @@
 		margin-top: 24px;
 	}
 
-	.stuff {
+	#stuff {
 		padding: 0 12px;
 		padding-bottom: 40px;
 		min-height: calc(100% - 504px);
 	}
 
-	.stuff h3 {
+	#stuff h3 {
 		color: #fff;
-		margin-top: -25px;
+		margin-top: 8px;
 		margin-bottom: 0;
 		font-weight: 400;
 	}
 
-	.stuff ul {
+	#stuff ul {
 		list-style-type: none;
 		padding: 0;
 		font-size: 16px;
 		color: hsl(140, 7%, 53%);
 	}
 
-	.stuff li {
+	#stuff li {
 		margin-top: 14px;
 	}
 	
 
-	.stuff a {
+	#stuff a {
 		font-size: 20px;
 	}
 
@@ -117,6 +117,7 @@
 		position: fixed;
 		bottom: 0;
 		left: 0;
+		margin-top: 0px;
 		width: 100%;
 		height: 40px;
 		background: linear-gradient(to bottom, transparent, hsl(240, 22%, 7%));
@@ -184,17 +185,10 @@
 	}
 	
 	@media (min-height: 625px) {
-	.copyright {
-		margin-top: -58px;
+	#copyright {
+		margin-top: -41px;
 		}
 	}
-	
-	@media (max-height: 700px) {
-	#email {
-		font-size: 18px;
-		}
-	}
-	
 	
 	@media (max-width: 1300px) {
 		svg {
