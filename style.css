@@ -95,6 +95,11 @@ main p {
 	font-weight: 400;
 }
 
+.logo svg {
+	margin-top: 77px;
+	margin-left: 212px;
+}
+
 #stuff ul {
 	list-style-type: none;
 	padding: 0;
@@ -140,10 +145,8 @@ main p {
 }
 
 svg {
-	position: fixed;
-	right: 9vw;
-	left: 45vw;
-	top: 10vw;
+	position: absolute;
+	margin-top: 20px;
 	opacity: 0.7;
 	transition: opacity .1s;
 }
@@ -193,7 +196,18 @@ svg:hover {
 	}
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1050px) {
+	svg {
+		position: absolute;
+		margin-top: 20px;
+		opacity: 0.7;
+		transition: opacity .1s;
+		width: 665px; /* Ширина блока */
+		height: 257px; /* Высота блока */	
+	}
+}
+
+@media (max-width: 675px) {
 	svg {
 		display: none;
 	}
