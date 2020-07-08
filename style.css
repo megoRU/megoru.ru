@@ -207,7 +207,7 @@ svg:hover {
 	}
 }
 
-@media (max-width: 675px) {
+@media (max-width: 760px) {
 	svg {
 		display: none;
 	}
