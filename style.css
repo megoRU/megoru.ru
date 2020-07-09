@@ -207,7 +207,44 @@ svg:hover {
 	}
 }
 
-@media (max-width: 760px) {
+
+@media screen and (max-width: 768px) {
+	.img-responsive {
+		margin-left: 10px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.img-responsive {
+		margin-left: 0px;
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	#copyright p {
+		font-size: 16px;
+	}
+	#copyright a {
+		font-size: 16px;
+	}
+	.animated p {
+		font-size: 23px;
+	}
+	#stuff a {
+		font-size: 18px;
+	}
+	.main div {
+		padding: 12px;
+		font-size: 24px;
+		line-height: 1.2;
+		display: flex;
+		color: hsl(140, 7%, 80%);
+		margin-top: -17px;
+	}
+}
+
+@media screen and (max-width: 768px) {
 	svg {
 		display: none;
 	}
