@@ -209,29 +209,20 @@ svg:hover {
 }
 
 
-@media screen and (max-width: 768px) {
+@media (max-width: 720px) {
 	.img-responsive {
 		margin-left: 10px;
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 720px) {
 	.img-responsive {
 		margin-left: 0px;
 	}
 }
 
 
-@media screen and (max-width: 768px) {
-	#copyright p {
-		font-size: 16px;
-	}
-	#copyright a {
-		font-size: 16px;
-	}
-	#stuff a {
-		font-size: 18px;
-	}
+@media (max-width: 720px) {
 	.main div {
 		padding: 12px;
 		font-size: 24px;
@@ -240,9 +231,16 @@ svg:hover {
 		color: hsl(140, 7%, 80%);
 		margin-top: -17px;
 	}
+	#email p {
+		font-size: 22px;
+	} 
+	#stuff a {
+		font-size: 16px;
+	} 
+
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 720px) {
 	svg {
 		display: none;
 	}
