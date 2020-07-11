@@ -79,12 +79,13 @@ main h1 a:hover {
 }
 
 main p {
-	margin-top: 24px;
+	margin-top: -26px;
+	line-height: 1.5;
 }
 
 #stuff {
 	padding: 0 12px;
-	padding-bottom: 40px;
+	padding-bottom: 0px;
 	min-height: calc(100% - 504px);
 }
 
@@ -228,9 +229,6 @@ svg:hover {
 	#copyright a {
 		font-size: 16px;
 	}
-	.animated p {
-		font-size: 23px;
-	}
 	#stuff a {
 		font-size: 18px;
 	}
@@ -248,4 +246,48 @@ svg:hover {
 	svg {
 		display: none;
 	}
+}
+
+.img-responsive {
+	overflow:hidden;
+	width: 363px;
+	height: 203px;
+}
+
+#stuff img {
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+}
+
+#stuff img:hover{
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-o-transform: scale(1.05);
+}
+
+.animated a {
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+}
+
+.animated a:hover {
+	font-size: 30px;
+}
+
+#textmain p {
+	margin-top: 20px;
+}
+
+
+#stuff a:hover {
+	font-size: 25px;
+}
+
+
+#stuff a {
+	margin-top: 20px;
 }
