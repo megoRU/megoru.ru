@@ -247,12 +247,24 @@ svg:hover {
 		color: hsl(140, 7%, 80%);
 		margin-top: -17px;
 	}
-	#email p {
-		font-size: 22px;
+	.textmain p {
+		font-size: 20px;
 	} 
 	#stuff a {
-		font-size: 16px;
+		font-size: 17px;
 	} 
+	.animated a:hover {
+	font-size: 16px;
+	}
+	#stuff a:hover {
+	font-size: 18px;
+	}
+	#copyright a {
+		font-size: 18px;
+	}
+	#copyright p {
+		font-size: 18px;
+	}
 
 }
 
@@ -291,16 +303,13 @@ svg:hover {
 .animated a:hover {
 	font-size: 30px;
 }
-
-#textmain p {
-	margin-top: 20px;
-}
-
-
 #stuff a:hover {
 	font-size: 25px;
 }
 
+#textmain p {
+	margin-top: 20px;
+}
 
 #stuff a {
 	margin-top: 20px;
