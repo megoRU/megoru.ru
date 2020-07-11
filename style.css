@@ -28,6 +28,14 @@ body {
 	max-width: 800px;
 }
 
+.textmain ul {
+	margin-left: -8px;
+}
+
+.textmain p {
+	margin-left: -1px;
+}
+
 a {
 	color: hsl(140, 50%, 45%);
 	text-decoration: none;
@@ -46,9 +54,14 @@ a:focus {
 	text-decoration: none;
 }
 
+#stuff a img {
+	
+}
+
 main {
 	padding: 12px;
 	font-size: 24px;
+	margin-left: 0px;
 	line-height: 1.2;
 	display: flex;
 	color: hsl(140, 7%, 80%);
@@ -61,6 +74,7 @@ main > div {
 
 main h1 {
 	font-size: 40px;
+	margin-left: 2px;
 	font-weight: 400;
 	margin: 0;
 	margin-top: 0px;
@@ -70,6 +84,7 @@ main h1 {
 main h2 {
 	font-size: 18px;
 	font-weight: 400;
+	margin-left: 2px;
 	margin: 0;
 	color: hsl(140, 7%, 53%);
 }
@@ -92,13 +107,14 @@ main p {
 #stuff h3 {
 	color: #fff;
 	margin-top: 8px;
+	margin-left: -1px;
 	margin-bottom: 0;
 	font-weight: 400;
 }
 
 .logo svg {
 	margin-top: 77px;
-	margin-left: 212px;
+	margin-left: 240px;
 }
 
 #stuff ul {
