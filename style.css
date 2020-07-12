@@ -151,15 +151,23 @@ main p {
 	}
 }
 
-@media (max-width: 1050px) {
-	svg {
+@media (max-width: 1150px) {
+	#textmainn {
 		position: absolute;
 		margin-top: 20px;
-		opacity: 0.7;
-		transition: opacity .1s;
-		width: 665px; /* Ширина блока */
-		height: 257px; /* Высота блока */	
+		width: 300px; /* Ширина блока */
+		height: 150px; /* Высота блока */	
 	}
+	#textmainn h1 {
+		font-size: 30px;
+	}
+	#textmainn img {
+		width: 50px;
+		height: 50px;
+		margin: 8px;
+	}
+	
+
 }
 
 
