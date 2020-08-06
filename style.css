@@ -8,7 +8,7 @@
 
 html {
 	box-sizing: border-box;
-	user-select: none;
+	
 	scrollbar-color: dark;
 }
 
@@ -98,6 +98,7 @@ body {
 	text-decoration: none;
 }
 .img-responsive img {
+	-webkit-
 	
 }
 }
@@ -122,6 +123,8 @@ main {
 	position: fixed;
 	margin-left: 110px;
 	margin-top: 20px;
+	-webkit-
+	
 }
 
 main > div {
@@ -234,6 +237,8 @@ main p {
 		width: 50px;
 		height: 50px;
 		margin: 8px;
+		-webkit-user-select: none;
+	
 	}
 }
 
@@ -287,6 +292,8 @@ main p {
 .img-responsive {
 	overflow:hidden;
 	width: 363px;
+	-webkit-user-select: none;
+	
 	height: 203px;
 }
 
@@ -294,6 +301,8 @@ main p {
 	-moz-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
 	-webkit-transition: all 0.2s ease;
+	-webkit-user-select: none;
+	
 }
 
 #stuff img:hover{
@@ -315,6 +324,7 @@ main p {
 	display: inline;
 	margin-right: 5px;
 	padding: 3px;
+	-webkit-user-select: none;
 }
 
 #textmainn ul {
@@ -322,7 +332,10 @@ main p {
 	display: inline;
 	margin-right: 5px;
 	padding: 3px;
+	-webkit-user-select: none;
+	
 }
+
 
 #textmainn img {
 	width: 75px;
