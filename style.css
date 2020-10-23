@@ -346,16 +346,48 @@ main p {
 }
 
 main img {
-	-moz-transition: all 0.2s ease;
+	/*-moz-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
 	-webkit-transition: all 0.2s ease;
+	width: 150px;
+	height: 150px;
+	*/
+	
 }
 
-main img:hover{
-	-webkit-transform: scale(1.3);
-	-moz-transform: scale(1.3);
-	-o-transform: scale(1.3);
+.forkme img {
+	position: absolute; 
+	-webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+	-webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+	top: 0; 
+	right: 0; 
+	border: 0;
+	width: 150px;
+	height: 150px;
 }
+
+.animating {
+	-webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+	-webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+
+/*
+main img:hover{
+	-webkit-transform: scale(1.0);
+	-moz-transform: scale(1.0);
+	-o-transform: scale(1.0);
+}
+*/
 
 .textmain {
 	margin-left: 2px;
