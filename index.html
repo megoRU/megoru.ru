@@ -12,29 +12,28 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link href="style.css" rel="stylesheet">
 
-    <style>
-        @font-face {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-        }
+<!--    <style>-->
+<!--        @font-face {-->
+<!--            font-family: 'Inter';-->
+<!--            font-style: normal;-->
+<!--            font-weight: 400;-->
+<!--            font-display: swap;-->
+<!--        }-->
 
-        @font-face {
-            font-display: fallback;
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 300;
-            src: url("Inter-Regular.woff2") format("woff2");
-        }
-    </style>
+<!--        @font-face {-->
+<!--            font-display: fallback;-->
+<!--            font-family: 'Montserrat';-->
+<!--            font-style: normal;-->
+<!--            font-weight: 300;-->
+<!--            src: url("Inter-Regular.woff2") format("woff2");-->
+<!--        }-->
+<!--    </style>-->
     <!--<script src="1.js"></script>-->
 </head>
 <body>
 <main>
     <div class="forkme">
-        <a href="https://github.com/megoRU/megolox.ru" target="_blank"><img src="img/forkme.png"
-                                                                            alt="Fork me on GitHub"></a>
+        <a href="https://github.com/megoRU/megolox.ru" target="_blank"><img src="img/forkme.png" alt="Fork me on GitHub"></a>
     </div>
     <div class="logo">
         <div id="textmainn">
@@ -65,14 +64,22 @@
 </main>
 <div id="stuff">
     <div class="animated zoomIn delay1">
+        <div id="myProject">
+        <h3 class="h3">My projects</h3>
+        <ul>
+            <li><p>Written using the <a href="https://github.com/DV8FromTheWorld/JDA" target="_blank">JDA</a> library</p></li>
+        </ul>
+            </div>
+        <div id="myProject2">
+            <p><a href="https://top.gg/bot/754093698681274369/" target="_blank">Discord Bot</a></p>
+        </div>
         <h3 class="h3">Links</h3>
         <ul>
-            <li><p>Discord Bot: <br><a href="https://top.gg/bot/754093698681274369/" target="_blank">top.gg</a></p></li>
-            <li><p>Статистика посещения серверов: <br><a href="https://ip-games.ru/server_info/45.138.72.66:9987" target="_blank">TS3</a>, <a href="/ts3stats/stats/" target="_blank">/ts3stats</a></p>
+            <li><p>Статистика посещения серверов<br><a href="https://ip-games.ru/server_info/45.138.72.66:9987" target="_blank">TS3</a>, <a href="/ts3stats/stats/" target="_blank">/ts3stats</a></p>
             </li>
-            <li><p>Нажмите чтобы подключиться: <br><a href="ts3server://ts3.megolox.ru/?port=9987">ts3.megolox.ru</a>,<a href="steam://connect/176.96.238.167:27015">csgo.megolox.ru</a></p></li>
+            <li><p>Click to connect<br><a href="ts3server://ts3.megolox.ru/?port=9987">ts3.megolox.ru</a></p></li>
             <li><p>SB & LR <br><a href="/bans" target="_blank">/bans</a>, <a href="/stats" target="_blank">/stats</a></p></li>
-            <li><p>Мониторинг доступности всех систем: <br><a href="https://status.megolox.ru" target="_blank">status.megolox.ru</a></p></li>
+            <li><p>Мониторинг доступности всех систем<br><a href="https://status.megolox.ru" target="_blank">status.megolox.ru</a></p></li>
             <!--<li><p> <a href="https://megolox.ru/ts3stats/stats/" target="_blank"><img src="img/TS3Stats.jpg" class="img-responsive" width="363" height="203" style="border-radius: 15px"alt=""></a></p></li>-->
             <!--<a href="https://gamingservers.ru/teamspeak3/76872/" target="_blank">gamingservers.ru</a>-->
         </ul>
@@ -80,26 +87,11 @@
         <div id="copyright">
             <p>2019-2020. Design by <a href="https://github.com/xPaw/xpaw.me" target="_blank">xPaw </a> & <a
                     href="https://steamcommunity.com/id/megoRU" target="_blank">mego</a></p>
-            <p>Contact us:
-                <script type="text/javascript" language="javascript">
-                    {
-                        coded = "xnesExs@BHFnunC.jz"
-                        key = "HsQJOlSTo2UwarcN4A1W9mZu7fnPDKEjxqXyg0kBdzhpet3YiLC8bMFIRVv6G5"
-                        shift = coded.length
-                        link = ""
-                        for (i = 0; i < coded.length; i++) {
-                            if (key.indexOf(coded.charAt(i)) == -1) {
-                                ltr = coded.charAt(i)
-                                link += (ltr)
-                            } else {
-                                ltr = (key.indexOf(coded.charAt(i)) - shift + key.length) % key.length
-                                link += (key.charAt(ltr))
-                            }
-                        }
-                        document.write("<a href='mailto:" + link + "'>" + link + "</a>")
-                    }</script>
-            </p>
-            <!--LiveInternet counter-->
+            <p>Заказать сервер со скидкой:</p>
+            <p><a href="https://my.msk.host/?from=1614471" target="_blank"><img
+                    src="https://my.msk.host/manimg/orion/local_1968aa52df3a/logo.png" class="imgg" width="173"
+                    height="37" style="border-radius: 15px" alt=""></a></p>
+					 <!--LiveInternet counter-->
             <p><a href="//www.liveinternet.ru/click"
                   target="_blank"><img id="licnt0F0E" width="88" height="15" style="border:0"
                                        title="LiveInternet: показано число посетителей за сегодня"
@@ -113,10 +105,6 @@
                         ";h" + escape(d.title.substring(0, 150)) + ";" + Math.random()
                 })
                 (document, screen)</script><!--/LiveInternet--></p>
-            <p>Заказать сервер со скидкой:</p>
-            <p><a href="https://my.msk.host/?from=1614471" target="_blank"><img
-                    src="https://my.msk.host/manimg/orion/local_1968aa52df3a/logo.png" class="imgg" width="173"
-                    height="37" style="border-radius: 15px" alt=""></a></p>
         </div>
     </div>
 </div>
