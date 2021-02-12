@@ -3017,7 +3017,7 @@ main p {
 
 #stuff {
     padding: 0 12px 0;
-    min-height: calc(100% - 504px);
+    min-height: calc(100% - 400px);
 }
 
 .aboutMe h3 {
