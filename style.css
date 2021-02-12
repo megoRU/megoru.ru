@@ -83,13 +83,13 @@ body {
     margin-top: -16px;
 }
 
-.textmain a {
+.aboutMe a {
     color: hsl(140, 50%, 45%);
     text-decoration: none;
     font-weight: 500;
 }
 
-.textmain h1 {
+.aboutMe h1 {
     font-weight: 400;
 }
 
@@ -2967,7 +2967,7 @@ body {
 }
 
 
-.textmain a:focus {
+.aboutMe a:focus {
     outline: none;
     color: hsl(240, 22%, 7%);
     background-color: hsl(140, 80%, 45%);
@@ -3020,7 +3020,7 @@ main p {
     min-height: calc(100% - 504px);
 }
 
-.textmain h3 {
+.aboutMe h3 {
     color: #fff;
     margin-top: 8px;
     margin-left: -1px;
@@ -3114,18 +3114,18 @@ main p {
 }
 
 @media (max-width: 1150px) {
-    #textmainn {
+    #workingWith {
         position: absolute;
         margin-top: 20px;
         width: 300px; /* Ширина блока */
         height: 150px; /* Высота блока */
     }
 
-    #textmainn h1 {
+    #workingWith h1 {
         font-size: 30px;
     }
 
-    #textmainn img {
+    #workingWith img {
         width: 50px;
         height: 50px;
         margin: 8px;
@@ -3154,7 +3154,7 @@ main p {
         margin-top: -17px;
     }
 
-    .textmain p {
+    .aboutMe p {
         font-size: 20px;
     }
 
@@ -3212,33 +3212,26 @@ main p {
     -ms-transition: all 0.2s ease;
 }
 
-#blockmain ul {
+#workingWith ul {
     margin-left: -8px;
     display: inline;
     margin-right: 5px;
     padding: 3px;
 }
 
-#textmainn ul {
-    margin-left: -8px;
-    display: inline;
-    margin-right: 5px;
-    padding: 3px;
-}
-
-#textmainn img {
+#workingWith img {
     width: 75px;
     height: 75px;
     margin: 8px;
 }
 
-#textmainn {
+#workingWith {
     position: fixed;
     margin-left: 473px;
     margin-top: 1px;
 }
 
-#textmainn h1 {
+#workingWith h1 {
     font-weight: 400;
 }
 
@@ -3291,15 +3284,15 @@ main img:hover{
 }
 */
 
-.textmain {
+.aboutMe {
     margin-left: 2px;
 }
 
-.textmain ul {
+.aboutMe ul {
     margin-left: -8px;
 }
 
-.textmain p {
+.aboutMe p {
     margin-left: -1px;
 }
 
