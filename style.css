@@ -68,14 +68,12 @@ body {
 
 #stuff a {
     color: hsl(140, 50%, 45%);
-    text-decoration: none;
     font-weight: 500;
 }
 
 #myProject a {
 
     color: hsl(140, 7%, 53%);
-    text-decoration: none;
     font-weight: 500;
 }
 
@@ -85,7 +83,6 @@ body {
 
 .aboutMe a {
     color: hsl(140, 50%, 45%);
-    text-decoration: none;
     font-weight: 500;
 }
 
@@ -2963,7 +2960,6 @@ body {
     outline: none;
     color: hsl(240, 22%, 7%);
     background-color: hsl(140, 80%, 45%);
-    text-decoration: none;
 }
 
 
@@ -2971,7 +2967,6 @@ body {
     outline: none;
     color: hsl(240, 22%, 7%);
     background-color: hsl(140, 80%, 45%);
-    text-decoration: none;
 }
 
 .img-responsive img {
@@ -3016,8 +3011,7 @@ main p {
 }
 
 #stuff {
-    padding: 0 12px 0;
-    min-height: calc(100% - 400px);
+    margin-left: 12px;
 }
 
 .aboutMe h3 {
@@ -3067,26 +3061,28 @@ main p {
 }
 
 #copyright p {
-    flex: 0 0 auto;
     color: hsl(140, 7%, 80%);
     text-align: center;
     font-weight: 500;
     font-size: 20px;
-    margin: auto;
 }
 
-#copyright a:hover {
-    font-size: 25px;
-}
+/*#copyright a:hover {*/
+/*    font-size: 25px;*/
+/*}*/
 
 #copyright a:focus {
     outline: none;
     color: hsl(240, 22%, 7%);
     background-color: hsl(140, 80%, 45%);
-    text-decoration: none;
 }
 
 #copyright {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
     font: normal 20px/1.4 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 }
 
@@ -3162,13 +3158,13 @@ main p {
         font-size: 17px;
     }
 
-    .animated a:hover {
-        font-size: 16px;
-    }
+    /*.animated a:hover {*/
+    /*    font-size: 16px;*/
+    /*}*/
 
-    #stuff a:hover {
-        font-size: 18px;
-    }
+    /*#stuff a:hover {*/
+    /*    font-size: 18px;*/
+    /*}*/
 
     #copyright a {
         font-size: 18px;
@@ -3198,11 +3194,11 @@ main p {
 }
 
 
-#stuff img:hover {
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -o-transform: scale(1.05);
-}
+/*#stuff img:hover {*/
+/*    -webkit-transform: scale(1.05);*/
+/*    -moz-transform: scale(1.05);*/
+/*    -o-transform: scale(1.05);*/
+/*}*/
 
 .animated a {
     transition: all 0.2s ease;
@@ -3253,12 +3249,6 @@ main img {
 
 .forkme img {
     position: absolute;
-    -webkit-animation-name: zoomIn;
-    animation-name: zoomIn;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
     top: 0;
     right: 0;
     border: 0;
@@ -3296,17 +3286,17 @@ main img:hover{
     margin-left: -1px;
 }
 
-.animated a:hover {
-    font-size: 30px;
-}
+/*.animated a:hover {*/
+/*    font-size: 30px;*/
+/*}*/
 
-#stuff a:hover {
-    font-size: 23px;
-}
+/*#stuff a:hover {*/
+/*    font-size: 23px;*/
+/*}*/
 
-#myProject a:hover {
-    font-size: 16px;
-}
+/*#myProject a:hover {*/
+/*    font-size: 16px;*/
+/*}*/
 
 #textmain p {
     margin-top: 20px;
