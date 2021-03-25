@@ -119,7 +119,8 @@ body {
 a {
   color: #39AC60;
   cursor: pointer;
-  text-decoration: none
+  text-decoration: none;
+  font-size: 21px;
 }
 
 a strong {
@@ -221,6 +222,9 @@ pre code {
 }
 
 @media screen and (max-width: 768px) {
+  .button {
+    margin-top: 10px;
+  }
   .is-block-mobile {
     display: block !important
   }
