@@ -109,7 +109,7 @@ code, pre {
 }
 
 body {
-    color: #e4e4e4;
+    color: #f5f5f5;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5
@@ -282,10 +282,8 @@ a.box:active {
     color: #363636;
     cursor: pointer;
     justify-content: center;
-    padding-bottom: calc(.375em - 1px);
-    padding-left: .75em;
-    padding-right: .75em;
-    padding-top: calc(.375em - 1px);
+    padding: calc(.375em - 1px) .75em;
+    margin-right: 5px;
     text-align: center;
     white-space: nowrap
 }
@@ -704,7 +702,7 @@ a.tag:hover {
 }
 
 .title, .intro .about strong {
-    color: #e4e4e4;
+    color: #f5f5f5;
     font-size: 25px;
     font-weight: 600;
     line-height: 1.125
@@ -807,7 +805,7 @@ a.tag:hover {
 }
 
 .breadcrumb a:hover {
-    color: #363636
+    color: #f5f5f5
 }
 
 .breadcrumb li {
