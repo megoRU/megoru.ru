@@ -86,7 +86,6 @@ html {
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
   overflow-x: hidden;
-  overflow-y: scroll;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -99,14 +98,13 @@ article, aside, figure, footer, header, section {
 }
 
 body, button {
-  font-family: 'Roboto', sans-serif;
-  /* font-family: BlinkMacSystemFont, -apple-system, segoe ui, roboto, oxygen, ubuntu, cantarell, fira sans, droid sans, helvetica neue, helvetica, arial, sans-serif */
- }
+
+}
 
  code, pre {
    -moz-osx-font-smoothing: auto;
    -webkit-font-smoothing: auto;
-   /* font-family: monospace */
+   /*font-family: monospace*/
 }
 
 body {
@@ -150,7 +148,7 @@ span {
 }
 
 strong {
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
   color: #363636;
   font-weight: 400
 }
