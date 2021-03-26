@@ -1,0 +1,34 @@
+/*! bulma-social v2.0.0 | MIT License | github.com/aldi/bulma-social */
+.button {
+  -webkit-transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+  -o-transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+  transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: .3s;
+  -o-transition-duration: .3s;
+  transition-duration: .3s
+}
+
+.no-animation {
+  -webkit-transition-property: none !important;
+  -o-transition-property: none !important;
+  transition-property: none !important
+}
+
+
+
+a {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s
+}
+
+.button.is-telegram {
+  background-color: #e2dfdf;
+  border-color: transparent;
+  color: #000000;
+}
