@@ -72,7 +72,7 @@ html {
 
 img, iframe {
   height: auto;
-  max-width: 100%
+  max-width: 100%;
 }
 
 iframe {
@@ -139,7 +139,10 @@ code {
 
 img {
   height: auto;
-  max-width: 100%
+  max-width: 100%;
+  vertical-align: middle;
+  margin-left: 5px;
+  border-style: none;
 }
 
 span {
