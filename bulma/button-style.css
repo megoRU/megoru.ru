@@ -1,0 +1,629 @@
+/*! bulma-social v2.0.0 | MIT License | github.com/aldi/bulma-social */
+.button {
+    -webkit-transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+    -o-transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+    transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+    -webkit-transition-property: background-color;
+    -o-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    transition-duration: .3s
+}
+
+.no-animation {
+    -webkit-transition-property: none !important;
+    -o-transition-property: none !important;
+    transition-property: none !important
+}
+
+a {
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s
+}
+
+.button.is-github {
+    background-color: #24292e;
+    border-color: transparent;
+    color: #fff
+}
+
+.button.is-github.is-hovered, .button.is-github:hover {
+    background-color: #1e2327;
+    border-color: transparent;
+    color: #fff
+}
+
+.button.is-github.is-focused, .button.is-github:focus {
+    border-color: transparent;
+    color: #fff
+}
+
+.button.is-github.is-focused:not(:active), .button.is-github:focus:not(:active) {
+    -webkit-box-shadow: 0 0 0 .125em rgba(36, 41, 46, .25);
+    box-shadow: 0 0 0 .125em rgba(36, 41, 46, .25)
+}
+
+.button.is-github.is-active, .button.is-github:active {
+    background-color: #191c20;
+    border-color: transparent;
+    color: #fff
+}
+
+.button.is-github[disabled], fieldset[disabled] .button.is-github {
+    background-color: #24292e;
+    border-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.button.is-github.is-inverted {
+    background-color: #fff;
+    color: #24292e
+}
+
+.button.is-github.is-inverted.is-hovered, .button.is-github.is-inverted:hover {
+    background-color: #f2f2f2
+}
+
+.button.is-github.is-inverted[disabled], fieldset[disabled] .button.is-github.is-inverted {
+    background-color: #fff;
+    border-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #24292e
+}
+
+.button.is-github.is-loading::after {
+    border-color: transparent transparent #fff #fff !important
+}
+
+.button.is-github.is-outlined {
+    background-color: transparent;
+    border-color: #24292e;
+    color: #24292e
+}
+
+.button.is-github.is-outlined.is-focused, .button.is-github.is-outlined.is-hovered, .button.is-github.is-outlined:focus, .button.is-github.is-outlined:hover {
+    background-color: #24292e;
+    border-color: #24292e;
+    color: #fff
+}
+
+.button.is-github.is-outlined.is-loading::after {
+    border-color: transparent transparent #24292e #24292e !important
+}
+
+.button.is-github.is-outlined.is-loading.is-focused::after, .button.is-github.is-outlined.is-loading.is-hovered::after, .button.is-github.is-outlined.is-loading:focus::after, .button.is-github.is-outlined.is-loading:hover::after {
+    border-color: transparent transparent #fff #fff !important
+}
+
+.button.is-github.is-outlined[disabled], fieldset[disabled] .button.is-github.is-outlined {
+    background-color: transparent;
+    border-color: #24292e;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #24292e
+}
+
+.button.is-github.is-inverted.is-outlined {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff
+}
+
+.button.is-github.is-inverted.is-outlined.is-focused, .button.is-github.is-inverted.is-outlined.is-hovered, .button.is-github.is-inverted.is-outlined:focus, .button.is-github.is-inverted.is-outlined:hover {
+    background-color: #fff;
+    color: #24292e
+}
+
+.button.is-github.is-inverted.is-outlined.is-loading.is-focused::after, .button.is-github.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-github.is-inverted.is-outlined.is-loading:focus::after, .button.is-github.is-inverted.is-outlined.is-loading:hover::after {
+    border-color: transparent transparent #24292e #24292e !important
+}
+
+.button.is-github.is-inverted.is-outlined[disabled], fieldset[disabled] .button.is-github.is-inverted.is-outlined {
+    background-color: transparent;
+    border-color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff
+}
+
+.button.is-github.is-light {
+    background-color: #f4f5f6;
+    color: #7e8c9a
+}
+
+.button.is-github.is-light.is-hovered, .button.is-github.is-light:hover {
+    background-color: #eceef0;
+    border-color: transparent;
+    color: #7e8c9a
+}
+
+.button.is-github.is-light.is-active, .button.is-github.is-light:active {
+    background-color: #e5e8eb;
+    border-color: transparent;
+    color: #7e8c9a
+}
+
+.button.is-static {
+    background-color: #f5f5f5;
+    border-color: #dbdbdb;
+    color: #7a7a7a;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    pointer-events: none
+}
+
+.has-text-github {
+    color: #24292e !important
+}
+
+a.has-text-github:focus, a.has-text-github:hover {
+    color: #0e1011 !important
+}
+
+.has-background-github {
+    background-color: #24292e !important
+}
+
+.has-text-github-light {
+    color: #f4f5f6 !important
+}
+
+a.has-text-github-light:focus, a.has-text-github-light:hover {
+    color: #d7dbe0 !important
+}
+
+.has-background-github-light {
+    background-color: #f4f5f6 !important
+}
+
+.has-text-github-dark {
+    color: #7e8c9a !important
+}
+
+a.has-text-github-dark:focus, a.has-text-github-dark:hover {
+    color: #9ba6b1 !important
+}
+
+.has-background-github-dark {
+    background-color: #7e8c9a !important
+}
+
+
+/*instagram*/
+
+/*! bulma-social v2.0.0 | MIT License | github.com/aldi/bulma-social */
+.button {
+    -webkit-transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+    -o-transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+    transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+    -webkit-transition-property: background-color;
+    -o-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    transition-duration: .3s
+}
+
+.no-animation {
+    -webkit-transition-property: none !important;
+    -o-transition-property: none !important;
+    transition-property: none !important
+}
+
+a {
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s
+}
+
+.button.is-instagram {
+    background-color: #ee5262;
+    border-color: transparent;
+    color: #fff
+}
+
+.button.is-instagram.is-hovered, .button.is-instagram:hover {
+    background-color: #ed4657;
+    border-color: transparent;
+    color: #fff
+}
+
+.button.is-instagram.is-focused, .button.is-instagram:focus {
+    border-color: transparent;
+    color: #fff
+}
+
+.button.is-instagram.is-focused:not(:active), .button.is-instagram:focus:not(:active) {
+    -webkit-box-shadow: 0 0 0 .125em rgba(238, 82, 98, .25);
+    box-shadow: 0 0 0 .125em rgba(238, 82, 98, .25)
+}
+
+.button.is-instagram.is-active, .button.is-instagram:active {
+    background-color: #ec3b4d;
+    border-color: transparent;
+    color: #fff
+}
+
+.button.is-instagram[disabled], fieldset[disabled] .button.is-instagram {
+    background-color: #ee5262;
+    border-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.button.is-instagram.is-inverted {
+    background-color: #fff;
+    color: #ee5262
+}
+
+.button.is-instagram.is-inverted.is-hovered, .button.is-instagram.is-inverted:hover {
+    background-color: #f2f2f2
+}
+
+.button.is-instagram.is-inverted[disabled], fieldset[disabled] .button.is-instagram.is-inverted {
+    background-color: #fff;
+    border-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #ee5262
+}
+
+.button.is-instagram.is-loading::after {
+    border-color: transparent transparent #fff #fff !important
+}
+
+.button.is-instagram.is-outlined {
+    background-color: transparent;
+    border-color: #ee5262;
+    color: #ee5262
+}
+
+.button.is-instagram.is-outlined.is-focused, .button.is-instagram.is-outlined.is-hovered, .button.is-instagram.is-outlined:focus, .button.is-instagram.is-outlined:hover {
+    background-color: #ee5262;
+    border-color: #ee5262;
+    color: #fff
+}
+
+.button.is-instagram.is-outlined.is-loading::after {
+    border-color: transparent transparent #ee5262 #ee5262 !important
+}
+
+.button.is-instagram.is-outlined.is-loading.is-focused::after, .button.is-instagram.is-outlined.is-loading.is-hovered::after, .button.is-instagram.is-outlined.is-loading:focus::after, .button.is-instagram.is-outlined.is-loading:hover::after {
+    border-color: transparent transparent #fff #fff !important
+}
+
+.button.is-instagram.is-outlined[disabled], fieldset[disabled] .button.is-instagram.is-outlined {
+    background-color: transparent;
+    border-color: #ee5262;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #ee5262
+}
+
+.button.is-instagram.is-inverted.is-outlined {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff
+}
+
+.button.is-instagram.is-inverted.is-outlined.is-focused, .button.is-instagram.is-inverted.is-outlined.is-hovered, .button.is-instagram.is-inverted.is-outlined:focus, .button.is-instagram.is-inverted.is-outlined:hover {
+    background-color: #fff;
+    color: #ee5262
+}
+
+.button.is-instagram.is-inverted.is-outlined.is-loading.is-focused::after, .button.is-instagram.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-instagram.is-inverted.is-outlined.is-loading:focus::after, .button.is-instagram.is-inverted.is-outlined.is-loading:hover::after {
+    border-color: transparent transparent #ee5262 #ee5262 !important
+}
+
+.button.is-instagram.is-inverted.is-outlined[disabled], fieldset[disabled] .button.is-instagram.is-inverted.is-outlined {
+    background-color: transparent;
+    border-color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff
+}
+
+.button.is-instagram.is-light {
+    background-color: #fdecee;
+    color: #c31325
+}
+
+.button.is-instagram.is-light.is-hovered, .button.is-instagram.is-light:hover {
+    background-color: #fce1e4;
+    border-color: transparent;
+    color: #c31325
+}
+
+.button.is-instagram.is-light.is-active, .button.is-instagram.is-light:active {
+    background-color: #fbd5d9;
+    border-color: transparent;
+    color: #c31325
+}
+
+.button.is-static {
+    background-color: #f5f5f5;
+    border-color: #dbdbdb;
+    color: #7a7a7a;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    pointer-events: none
+}
+
+.has-text-instagram {
+    color: #ee5262 !important
+}
+
+a.has-text-instagram:focus, a.has-text-instagram:hover {
+    color: #e92338 !important
+}
+
+.has-background-instagram {
+    background-color: #ee5262 !important
+}
+
+.has-text-instagram-light {
+    color: #fdecee !important
+}
+
+a.has-text-instagram-light:focus, a.has-text-instagram-light:hover {
+    color: #f9bec4 !important
+}
+
+.has-background-instagram-light {
+    background-color: #fdecee !important
+}
+
+.has-text-instagram-dark {
+    color: #c31325 !important
+}
+
+a.has-text-instagram-dark:focus, a.has-text-instagram-dark:hover {
+    color: #e92035 !important
+}
+
+.has-background-instagram-dark {
+    background-color: #c31325 !important
+}
+
+/*linkedin*/
+
+/*! bulma-social v2.0.0 | MIT License | github.com/aldi/bulma-social */
+.button {
+    -webkit-transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+    -o-transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+    transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+    -webkit-transition-property: background-color;
+    -o-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    transition-duration: .3s
+}
+
+.no-animation {
+    -webkit-transition-property: none !important;
+    -o-transition-property: none !important;
+    transition-property: none !important
+}
+
+a {
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s
+}
+
+.button.is-linkedin {
+    background-color: #0a66c2;
+    border-color: transparent;
+    color: #fff
+}
+
+.button.is-linkedin.is-hovered, .button.is-linkedin:hover {
+    background-color: #0960b6;
+    border-color: transparent;
+    color: #fff
+}
+
+.button.is-linkedin.is-focused, .button.is-linkedin:focus {
+    border-color: transparent;
+    color: #fff
+}
+
+.button.is-linkedin.is-focused:not(:active), .button.is-linkedin:focus:not(:active) {
+    -webkit-box-shadow: 0 0 0 .125em rgba(10, 102, 194, .25);
+    box-shadow: 0 0 0 .125em rgba(10, 102, 194, .25)
+}
+
+.button.is-linkedin.is-active, .button.is-linkedin:active {
+    background-color: #0959aa;
+    border-color: transparent;
+    color: #fff
+}
+
+.button.is-linkedin[disabled], fieldset[disabled] .button.is-linkedin {
+    background-color: #0a66c2;
+    border-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.button.is-linkedin.is-inverted {
+    background-color: #fff;
+    color: #0a66c2
+}
+
+.button.is-linkedin.is-inverted.is-hovered, .button.is-linkedin.is-inverted:hover {
+    background-color: #f2f2f2
+}
+
+.button.is-linkedin.is-inverted[disabled], fieldset[disabled] .button.is-linkedin.is-inverted {
+    background-color: #fff;
+    border-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #0a66c2
+}
+
+.button.is-linkedin.is-loading::after {
+    border-color: transparent transparent #fff #fff !important
+}
+
+.button.is-linkedin.is-outlined {
+    background-color: transparent;
+    border-color: #0a66c2;
+    color: #0a66c2
+}
+
+.button.is-linkedin.is-outlined.is-focused, .button.is-linkedin.is-outlined.is-hovered, .button.is-linkedin.is-outlined:focus, .button.is-linkedin.is-outlined:hover {
+    background-color: #0a66c2;
+    border-color: #0a66c2;
+    color: #fff
+}
+
+.button.is-linkedin.is-outlined.is-loading::after {
+    border-color: transparent transparent #0a66c2 #0a66c2 !important
+}
+
+.button.is-linkedin.is-outlined.is-loading.is-focused::after, .button.is-linkedin.is-outlined.is-loading.is-hovered::after, .button.is-linkedin.is-outlined.is-loading:focus::after, .button.is-linkedin.is-outlined.is-loading:hover::after {
+    border-color: transparent transparent #fff #fff !important
+}
+
+.button.is-linkedin.is-outlined[disabled], fieldset[disabled] .button.is-linkedin.is-outlined {
+    background-color: transparent;
+    border-color: #0a66c2;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #0a66c2
+}
+
+.button.is-linkedin.is-inverted.is-outlined {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff
+}
+
+.button.is-linkedin.is-inverted.is-outlined.is-focused, .button.is-linkedin.is-inverted.is-outlined.is-hovered, .button.is-linkedin.is-inverted.is-outlined:focus, .button.is-linkedin.is-inverted.is-outlined:hover {
+    background-color: #fff;
+    color: #0a66c2
+}
+
+.button.is-linkedin.is-inverted.is-outlined.is-loading.is-focused::after, .button.is-linkedin.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-linkedin.is-inverted.is-outlined.is-loading:focus::after, .button.is-linkedin.is-inverted.is-outlined.is-loading:hover::after {
+    border-color: transparent transparent #0a66c2 #0a66c2 !important
+}
+
+.button.is-linkedin.is-inverted.is-outlined[disabled], fieldset[disabled] .button.is-linkedin.is-inverted.is-outlined {
+    background-color: transparent;
+    border-color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff
+}
+
+.button.is-linkedin.is-light {
+    background-color: #ecf5fe;
+    color: #0c7ae9
+}
+
+.button.is-linkedin.is-light.is-hovered, .button.is-linkedin.is-light:hover {
+    background-color: #dfeefd;
+    border-color: transparent;
+    color: #0c7ae9
+}
+
+.button.is-linkedin.is-light.is-active, .button.is-linkedin.is-light:active {
+    background-color: #d3e8fd;
+    border-color: transparent;
+    color: #0c7ae9
+}
+
+.button.is-static {
+    background-color: #f5f5f5;
+    border-color: #dbdbdb;
+    color: #7a7a7a;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    pointer-events: none
+}
+
+.has-text-linkedin {
+    color: #0a66c2 !important
+}
+
+a.has-text-linkedin:focus, a.has-text-linkedin:hover {
+    color: #074d92 !important
+}
+
+.has-background-linkedin {
+    background-color: #0a66c2 !important
+}
+
+.has-text-linkedin-light {
+    color: #ecf5fe !important
+}
+
+a.has-text-linkedin-light:focus, a.has-text-linkedin-light:hover {
+    color: #bbdbfc !important
+}
+
+.has-background-linkedin-light {
+    background-color: #ecf5fe !important
+}
+
+.has-text-linkedin-dark {
+    color: #0c7ae9 !important
+}
+
+a.has-text-linkedin-dark:focus, a.has-text-linkedin-dark:hover {
+    color: #3394f5 !important
+}
+
+.has-background-linkedin-dark {
+    background-color: #0c7ae9 !important
+}
+
+/*telegram*/
+
+/*! bulma-social v2.0.0 | MIT License | github.com/aldi/bulma-social */
+.button {
+    -webkit-transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+    -o-transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+    transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+    -webkit-transition-property: background-color;
+    -o-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    transition-duration: .3s
+}
+
+.no-animation {
+    -webkit-transition-property: none !important;
+    -o-transition-property: none !important;
+    transition-property: none !important
+}
+
+
+
+a {
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s
+}
+
+.button.is-telegram {
+    background-color: #e2dfdf;
+    border-color: transparent;
+    color: #000000;
+}
