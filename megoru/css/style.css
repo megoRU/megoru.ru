@@ -9,7 +9,7 @@
 
 .my-projects {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   margin-top: 34px;
   margin-bottom: 15px;
 }
@@ -75,17 +75,17 @@ html {
 
 body {
   color: #f5f5f5;
-  font-family: Roboto, sans-serif;
+  font-family: Rubik, sans-serif;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5
 }
 
 a {
-  color: #39AC60;
+  color: #0eb547;
   cursor: pointer;
   text-decoration: none;
-  font-size: 21px;
+  font-size: 24px;
 }
 
 a:hover {
@@ -102,9 +102,8 @@ img {
 }
 
 strong {
-  /* font-family: 'Roboto', sans-serif; */
   color: #363636;
-  font-weight: 400
+  font-weight: 600
 }
 
 pre {
@@ -344,7 +343,7 @@ a.box:active {
 }
 
 .button.is-medium {
-  font-size: 1.25rem
+  font-size: 24px
 }
 
 .button.is-rounded {
@@ -498,7 +497,7 @@ a.box:active {
 
 .title, .intro .about strong {
   color: #f5f5f5;
-  font-size: 25px;
+  font-size: 44px;
   font-weight: 600;
   line-height: 1.125
 }
@@ -507,12 +506,18 @@ a.box:active {
   padding: 3rem 1.5rem
 }
 
-.footer {
-  background-color: #121212;
-  padding: 3rem 1.5rem 6rem
+footer {
+  background-color: #131c2c;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 13px 0;
+  position: absolute;
+  width: 100%;
 }
 
 body {
+  background: linear-gradient(265deg, #18705c 0%, #270b3e 100%);
   display: flex;
   min-height: 100vh;
   flex-direction: column
@@ -562,11 +567,6 @@ header .navbar-start {
     margin-bottom: 3rem;
     margin-top: -2rem
   }
-}
-
-.intro .about strong {
-  font-size: 44px;
-  font-weight: 800
 }
 
 @media screen and (max-width: 768px) {

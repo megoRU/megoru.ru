@@ -3,7 +3,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/roboto/fonts/roboto/roboto-v29-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/roboto/roboto-v29-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
     src: local(''),
     url('../fonts/roboto/roboto-v29-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
     url('../fonts/roboto/roboto-v29-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */

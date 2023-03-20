@@ -26,13 +26,13 @@ a {
 }
 
 .button.is-github {
-    background-color: #24292e;
+    background-color: #040204;
     border-color: transparent;
     color: #fff
 }
 
 .button.is-github.is-hovered, .button.is-github:hover {
-    background-color: #1e2327;
+    background-color: #040204;
     border-color: transparent;
     color: #fff
 }
