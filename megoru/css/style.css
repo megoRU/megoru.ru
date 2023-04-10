@@ -512,7 +512,7 @@ footer {
   display: flex;
   justify-content: space-evenly;
   padding: 13px 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
 }
 
