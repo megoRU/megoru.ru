@@ -1,0 +1,426 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  height: 25vh;
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 25px;
+  border-radius: 5%;
+}
+
+.listen {
+  justify-content: center;
+  align-items: center;
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.images-container img {
+  max-width: 100%;
+  height: 80px;
+  /*margin-right: 80px; !* добавляем отступ между изображениями *!*/
+}
+
+img:last-child {
+  margin-right: 20px; /* убираем отступ после последнего изображения */
+}
+
+.about-podcast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px
+}
+
+@media (max-width: 767px) {
+
+  /* Изменяем размер шрифта */
+  .about-podcast p {
+    font-size: 1.2rem;
+  }
+
+  .images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .about-podcast {
+    margin-bottom: 0;
+  }
+
+  .images-container img {
+    height: 7vh;
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 5px;
+    margin-top: 0;
+  }
+
+
+}
+
+
+
+/*!minireset.css v0.0.4 | MIT License | github.com/jgthms/minireset.css*/
+html, body, p, ul, li, figure, pre, iframe, h1, h2, h3 {
+  margin: 0;
+  padding: 0
+}
+
+h1, h2, h3 {
+  font-size: 100%;
+  font-weight: 400
+}
+
+ul {
+  list-style: none
+}
+
+html {
+  box-sizing: border-box
+}
+
+*, *::before, *::after {
+  box-sizing: inherit
+}
+
+
+html {
+  background-color: #20232a;
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%
+}
+
+body {
+  color: #f5f5f5;
+  font-family: Rubik, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5
+}
+
+a {
+  color: #0eb547;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative
+}
+
+.content li + li {
+  margin-top: .25em
+}
+
+.content p:not(:last-child), .content ul:not(:last-child), .content pre:not(:last-child) {
+  margin-bottom: 1em
+}
+
+.content h1, .content h2, .content h3 {
+  color: #363636;
+  font-weight: 600;
+  line-height: 1.125
+}
+
+.content h1 {
+  font-size: 2em;
+  margin-bottom: .5em
+}
+
+.content h1:not(:first-child) {
+  margin-top: 1em
+}
+
+.content h2 {
+  font-size: 1.75em;
+  margin-bottom: .5714em
+}
+
+.content h2:not(:first-child) {
+  margin-top: 1.1428em
+}
+
+.content h3 {
+  font-size: 1.5em;
+  margin-bottom: .6666em
+}
+
+.content h3:not(:first-child) {
+  margin-top: 1.3333em
+}
+
+.content ul {
+  list-style: disc outside;
+  margin-left: 2em;
+  margin-top: 1em
+}
+
+.content ul ul {
+  list-style-type: circle;
+  margin-top: .5em
+}
+
+/*Иконки в кнопках*/
+.icon {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem
+}
+
+.icon.is-medium {
+  height: 2rem;
+  width: 2rem
+}
+
+.title, .intro .about strong, .subtitle {
+  word-break: break-word
+}
+
+.title em, .intro .about strong em, .title span, .intro .about strong span, .subtitle em, .subtitle span {
+  font-weight: inherit
+}
+
+.title sup, .intro .about strong sup, .subtitle sup {
+  font-size: .75em
+}
+
+.title .tag, .intro .about strong .tag, .subtitle .tag {
+  vertical-align: middle
+}
+
+.title, .intro .about strong {
+  color: #f5f5f5;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.125
+}
+
+.section {
+  padding: 3rem 1.5rem
+}
+
+footer {
+  background-color: #131c2c;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 13px 0;
+  position: absolute;
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(265deg, #18705c 0%, #270b3e 100%);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column
+}
+
+body .main {
+  flex: 1
+}
+
+@media screen and (max-width: 768px) {
+  body .main {
+    padding-top: 0
+  }
+}
+
+header .navbar-start {
+  align-items: center
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    margin: -.75rem
+  }
+}
+
+.navbar-item .navbar-item-name {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 900
+}
+
+.navbar-brand .navbar-item img {
+  max-height: initial
+}
+
+.intro .about {
+  margin-bottom: 5rem
+}
+
+.about {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .intro .about {
+    margin-bottom: 3rem;
+    margin-top: -2rem
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro .about strong {
+    font-size: 30px
+  }
+}
+
+.intro .about p {
+  font-size: 1.5rem
+}
+
+.navbar-burger {
+  width: 4rem;
+  height: 4rem
+}
+
+.title.is-1, .intro .about strong.is-1, .title.is-2, .intro .about strong.is-2 {
+  font-weight: 900
+}
+
+.content p {
+  font-size: 20px;
+  margin: 0 0 23px;
+  line-height: 31px
+}
+
+@media screen and (max-width: 768px) {
+  .content p {
+    font-size: 20px;
+    margin: 0 0 24px;
+    line-height: 30px
+  }
+}
+
+.content .box.social .title, .content .box.social .intro .about strong, .intro .about .content .box.social strong {
+  font-weight: 800;
+  font-size: 30px;
+  margin-bottom: .5rem
+}
+
+.above-title {
+  margin-bottom: .5rem !important
+}
+
+article.post .content, article.place .content {
+  margin-top: 3rem
+}
+
+.post .tags.is-spaced {
+  margin-bottom: 3rem
+}
+
+.post .under-post-navigation ul.is-flex {
+  justify-content: space-between
+}
+
+.post .under-post-navigation ul.is-flex li {
+  margin: 0 -.75rem
+}
+
+.css-column {
+  -moz-column-count: 4;
+  column-count: 4;
+  -moz-column-width: 30rem;
+  column-width: 30rem;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+  margin-top: 2rem
+}
+
+@media screen and (min-width: 1088px) {
+  .css-column {
+    -moz-column-width: 1rem;
+    column-width: 1rem
+  }
+}
+
+.is-mobile-columns {
+  display: flex
+}
+
+@media screen and (max-width: 768px) {
+  .is-mobile-columns {
+    flex-direction: column
+  }
+}
+
+#TableOfContents ul {
+  margin-left: 1rem
+}
+
+#TableOfContents ul li {
+  font-size: 1rem;
+  list-style: disc
+}
+
+#TableOfContents > ul > li {
+  margin-bottom: .5rem
+}
+
+#TableOfContents ul ul li {
+  font-size: .95rem;
+  list-style: outside circle
+}
+
+.copy {
+  flex-flow: column;
+  align-items: flex-start
+}
+
+.footer {
+  padding-bottom: 3rem
+}
+
+.visited {
+  position: relative;
+  top: -.3rem;
+  margin-left: 1rem
+}
+
+@media screen and (max-width: 768px) {
+  .visited {
+    margin-left: 0;
+    margin-top: 1rem
+  }
+}
+
+.subsections:last-child {
+  margin-bottom: 3rem
+}
+
+.is-link {
+  padding: 2px;
+  margin: -2px;
+  border-bottom: 1px solid #dbdbdb
+}
+
+.is-link:hover, .is-link:active {
+  border-color: #b5b5b5
+}
