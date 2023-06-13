@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 60px;
 }
 
 .logo img {
@@ -38,6 +39,10 @@ img:last-child {
   justify-content: center;
   align-items: center;
   margin-bottom: 25px
+}
+
+.about-podcast strong {
+  font-size: 30px;
 }
 
 .btn-back {
@@ -88,8 +93,12 @@ footer {
     flex-wrap: wrap;
   }
 
+  .about-podcast strong {
+    font-size: 25px;
+  }
+
   .about-podcast {
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
 
   .images-container img {
@@ -249,7 +258,7 @@ a {
 }
 
 .section {
-  padding: 3rem 1.5rem
+  padding: 1rem 1.5rem
 }
 
 body {
