@@ -136,7 +136,7 @@ html[data-theme-ready] body {
     gap: 28px;
 }
 
-.theme-toggle {
+.theme-switcher {
     grid-column: 3;
     justify-self: end;
 }
@@ -215,20 +215,6 @@ html {
     flex-shrink: 0;
 }
 
-.project-arrow {
-    color: var(--description-color);
-    font-size: 18px;
-    line-height: 1;
-
-    transition:
-            color 0.2s ease,
-            transform 0.2s ease;
-}
-
-.project-card:hover .project-arrow {
-    color: var(--accent-color);
-    transform: translate(2px, -2px);
-}
 
 @media (max-width: 600px) {
     .project-card {
@@ -281,12 +267,6 @@ header {
     color: var(--accent-color);
 }
 
-.theme-switcher {
-    position: absolute;
-    right: 24px;
-    top: 50%;
-    transform: translateY(-50%);
-}
 
 /* Header Content */
 .header-content {
@@ -431,8 +411,7 @@ main {
 }
 
 .support-card {
-    display: grid;
-    grid-template-columns: 54px 500px 1fr auto;
+    display: flex;
     align-items: center;
     gap: 20px;
 
@@ -462,15 +441,12 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .support-details {
-    width: auto;
-}
-
-.support-card .btn-support {
-    margin-left: 0;
-    white-space: nowrap;
+    flex: 1;
+    min-width: 0;
 }
 
 .support-details h4 {
@@ -487,21 +463,28 @@ main {
 }
 
 .support-card .btn-support {
-    margin-left: auto;
     padding: 8px 16px;
     font-size: 13px;
+    white-space: nowrap;
     flex-shrink: 0;
 }
 
 @media (max-width: 600px) {
     .support-card {
+        flex-wrap: wrap;
+        gap: 16px;
         min-height: auto;
         padding: 16px;
     }
 
-    .support-details {
-        width: auto;
-        flex: 1;
+    .support-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .support-card .btn-support {
+        width: 100%;
+        justify-content: center;
     }
 }
 
@@ -644,6 +627,17 @@ html[data-theme='auto'] .theme-switcher .icon-auto {
 }
 
 @media (max-width: 600px) {
+    .nav-container {
+        padding: 12px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
     .projects {
         grid-template-columns: 1fr;
     }
