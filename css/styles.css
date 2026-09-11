@@ -1,5 +1,6 @@
 :root {
     --bg-color: #f2fff5;
+    --nav-bg: rgba(242, 255, 245, 0.85);
     --card-bg: #ffffff;
     --card-border: rgba(0, 0, 0, 0.06);
     --text-color: #252525;
@@ -29,6 +30,7 @@
 
 html[data-theme='dark'] {
     --bg-color: #0d1310;
+    --nav-bg: rgba(13, 19, 16, 0.85);
     --card-bg: #141d18;
     --card-border: rgba(255, 255, 255, 0.06);
     --text-color: #e1ede5;
@@ -59,6 +61,7 @@ html[data-theme='dark'] {
 @media (prefers-color-scheme: dark) {
     html[data-theme='auto'] {
         --bg-color: #0d1310;
+        --nav-bg: rgba(13, 19, 16, 0.85);
         --card-bg: #141d18;
         --card-border: rgba(255, 255, 255, 0.06);
         --text-color: #e1ede5;
@@ -111,27 +114,31 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Nav Container */
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Nav Container (Sticky & Centered Navigation) */
+header {
+    position: relative;
 }
 
-.nav-logo {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--heading-color);
-    text-decoration: none;
-    letter-spacing: -0.5px;
+.nav-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--card-border);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .nav-links {
     display: flex;
-    gap: 28px;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-links a {
@@ -146,11 +153,18 @@ body {
     color: var(--accent-color);
 }
 
+.theme-switcher {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 /* Header Content */
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 24px 60px;
+    padding: 50px 24px 60px;
 }
 
 .intro h1 {
@@ -427,13 +441,12 @@ main {
     gap: 16px;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .support-card:hover {
     background-color: var(--card-hover-bg-color);
-    border-color: var(--accent-color);
-    transform: translateY(-2px);
+    border-color: var(--card-border);
 }
 
 .support-icon {
@@ -446,6 +459,10 @@ main {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+}
+
+.support-details {
+    flex-grow: 1;
 }
 
 .support-details h4 {
@@ -461,22 +478,16 @@ main {
     color: var(--description-color);
 }
 
-.support-link-arrow {
-    margin-left: auto;
-    font-size: 18px;
-    color: var(--description-color);
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.support-card:hover .support-link-arrow {
-    transform: translateX(4px);
-    color: var(--accent-color);
+.btn-support {
+    padding: 8px 16px;
+    font-size: 13px;
+    flex-shrink: 0;
 }
 
 /* Contacts Section */
 .contacts-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
 }
 
@@ -521,29 +532,14 @@ footer {
 .footer-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
+    justify-content: center;
+    text-align: center;
     color: var(--footer-text-color);
     font-size: 14px;
 }
 
 .footer-content p {
     margin: 0;
-}
-
-.footer-links {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-links a {
-    color: var(--footer-text-color);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
-    color: var(--accent-color);
 }
 
 /* Theme Switcher */
@@ -608,18 +604,6 @@ html[data-theme='auto'] .theme-switcher .icon-auto {
 }
 
 @media (max-width: 768px) {
-    .nav-container {
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-
-    .nav-links {
-        order: 3;
-        width: 100%;
-        justify-content: center;
-        gap: 20px;
-    }
-
     .intro h1 {
         font-size: 32px;
     }
