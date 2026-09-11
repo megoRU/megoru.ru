@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeSwitcher = document.querySelector('.theme-switcher');
     const root = document.documentElement;
-    const body = document.body;
 
     const themes = ['light', 'dark', 'auto'];
     let currentThemeIndex = 0;
@@ -12,10 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
         currentThemeIndex = themes.indexOf(theme);
     }
 
-    themeSwitcher.addEventListener('click', () => {
-        currentThemeIndex = (currentThemeIndex + 1) % themes.length;
-        applyTheme(themes[currentThemeIndex]);
-    });
+    if (themeSwitcher) {
+        themeSwitcher.addEventListener('click', () => {
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            applyTheme(themes[currentThemeIndex]);
+        });
+    }
 
     applyTheme(localStorage.getItem('theme') || 'auto');
 
@@ -24,4 +25,29 @@ document.addEventListener('DOMContentLoaded', () => {
             applyTheme('auto');
         }
     });
+
+    // Fetch GitHub Stars for YetAnotherSSHClient
+    async function fetchGitHubStars() {
+        const starsBadge = document.getElementById('ssh-client-stars');
+        if (!starsBadge) return;
+
+        const starsCountElement = starsBadge.querySelector('.stars-count');
+
+        try {
+            const response = await fetch('https://api.github.com/repos/megoRU/YetAnotherSSHClient');
+            if (response.ok) {
+                const data = await response.json();
+                if (data && typeof data.stargazers_count === 'number') {
+                    starsCountElement.textContent = data.stargazers_count;
+                    return;
+                }
+            }
+            starsCountElement.textContent = '15'; // fallback if API fails or rate limited
+        } catch (error) {
+            console.error('Failed to fetch GitHub stars:', error);
+            starsCountElement.textContent = '15'; // fallback value
+        }
+    }
+
+    fetchGitHubStars();
 });
