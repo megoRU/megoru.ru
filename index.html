@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#0d1310" media="(prefers-color-scheme: dark)">
     <meta name="theme-color" content="#f2fff5" media="(prefers-color-scheme: light)">
 
-    <title>megoRU | Портфолио</title>
+    <title>mego | Портфолио</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
@@ -16,11 +16,7 @@
     <script>
         (function () {
             const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                document.documentElement.setAttribute('data-theme', savedTheme);
-            } else {
-                document.documentElement.setAttribute('data-theme', 'auto');
-            }
+            document.documentElement.setAttribute('data-theme', savedTheme || 'auto');
         })();
     </script>
 
@@ -29,39 +25,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-<header>
-    <div class="nav-container">
-        <nav class="nav-links">
-            <a href="#projects">Проекты</a>
-            <a href="#support">Поддержать</a>
-            <a href="#contacts">Контакты</a>
-        </nav>
-        <div class="theme-switcher">
-            <button id="theme-toggle" title="Toggle theme">
-                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-                <svg class="icon-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path>
-                </svg>
-            </button>
-        </div>
-    </div>
 
+<body>
+
+<div class="nav-container">
+    <nav class="nav-links" aria-label="Основная навигация">
+        <a href="#projects">Проекты</a>
+        <a href="#support">Поддержать</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+
+    <div class="theme-switcher">
+        <button
+                id="theme-toggle"
+                type="button"
+                title="Сменить тему"
+                aria-label="Сменить тему"
+        >
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+
+            <svg class="icon-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 fill="currentColor">
+                <path d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637.737 4.95 2.05z"></path>
+            </svg>
+        </button>
+    </div>
+</div>
+
+<header>
     <div class="header-content">
         <div class="intro">
             <h1>Привет, я mego!</h1>
@@ -71,174 +80,230 @@
 </header>
 
 <main>
+
     <section id="projects" class="section">
         <h3 class="section-title">Мои проекты</h3>
+
         <div id="projects-container" class="projects">
 
-            <a href="https://github.com/megoRU/MicGainControl" target="_blank" rel="noopener noreferrer">
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <img src="assets/images/micGainControl.png" alt="MicGainControl" class="project-image">
-                    </div>
-                    <div class="project-info">
-                        <h4>MicGainControl</h4>
-                        <p class="description">Утилита для контроля уровня громкости микрофона в Windows</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="status-badge">LTS</span>
-                    </div>
+            <a href="https://github.com/megoRU/MicGainControl"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="project-card">
+
+                <div class="project-info">
+                    <h4>MicGainControl</h4>
+                    <p class="description">
+                        Утилита для контроля уровня громкости микрофона в Windows
+                    </p>
+                </div>
+
+                <div class="card-footer">
+                    <span class="status-badge">LTS</span>
+                    <span class="project-arrow" aria-hidden="true">↗</span>
                 </div>
             </a>
 
-            <a href="https://yetanothersshclient.ru" target="_blank" rel="noopener noreferrer">
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <img src="assets/images/YetAnotherSSHClient.png" alt="YetAnotherSSHClient" class="project-image">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-header-title">
-                            <h4>YetAnotherSSHClient</h4>
-                        </div>
-                        <p class="description">Простой и быстрый SSH клиент</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="github-stars-badge" id="ssh-client-stars" title="Звёзды на GitHub">
-                            <svg class="star-icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
-                                <path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/>
-                            </svg>
-                            <span class="stars-count">...</span>
-                        </span>
-                        <span class="status-badge">LTS</span>
-                    </div>
+            <a href="https://yetanothersshclient.ru"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="project-card">
+
+                <div class="project-info">
+                    <h4>YetAnotherSSHClient</h4>
+                    <p class="description">
+                        Простой и быстрый SSH клиент
+                    </p>
+                </div>
+
+                <div class="card-footer">
+                    <span class="github-stars-badge"
+                          id="ssh-client-stars"
+                          title="Звёзды на GitHub">
+                        <svg class="star-icon" width="14" height="14" viewBox="0 0 16 16"
+                             fill="currentColor">
+                            <path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/>
+                        </svg>
+                        <span class="stars-count">...</span>
+                    </span>
+
+                    <span class="status-badge">LTS</span>
+                    <span class="project-arrow" aria-hidden="true">↗</span>
                 </div>
             </a>
 
-            <a href="https://megoru.ru">
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <img src="assets/images/vpn.png" alt="Проект с VPN" class="project-image">
-                    </div>
-                    <div class="project-info">
-                        <h4>Какой-то проект с VPN</h4>
-                        <p class="description">Телеграм бот</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="status-badge">Confidential</span>
-                    </div>
+            <a href="https://megoru.ru"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="project-card">
+
+                <div class="project-info">
+                    <h4>Какой-то проект с VPN</h4>
+                    <p class="description">
+                        Телеграм бот
+                    </p>
+                </div>
+
+                <div class="card-footer">
+                    <span class="status-badge">Confidential</span>
+                    <span class="project-arrow" aria-hidden="true">↗</span>
                 </div>
             </a>
 
-            <a href="https://t.me/scan_fit_bot" target="_blank" rel="noopener noreferrer">
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <img src="assets/images/scanFit.jpg" alt="ScanFit" class="project-image">
-                    </div>
-                    <div class="project-info">
-                        <h4>ScanFit</h4>
-                        <p class="description">Telegram бот для расчета КБЖУ</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="status-badge">Closed</span>
-                    </div>
+            <a href="https://t.me/scan_fit_bot"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="project-card">
+
+                <div class="project-info">
+                    <h4>ScanFit</h4>
+                    <p class="description">
+                        Telegram бот для расчета КБЖУ
+                    </p>
+                </div>
+
+                <div class="card-footer">
+                    <span class="status-badge">Closed</span>
+                    <span class="project-arrow" aria-hidden="true">↗</span>
                 </div>
             </a>
 
-            <a href="https://rconf.ru" target="_blank" rel="noopener noreferrer">
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <img src="assets/images/rconf.png" alt="RConf" class="project-image">
-                    </div>
-                    <div class="project-info">
-                        <h4>RConf</h4>
-                        <p class="description">Реализация поддержки в Telegram</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="status-badge">Unknown</span>
-                    </div>
+            <a href="https://rconf.ru"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="project-card">
+
+                <div class="project-info">
+                    <h4>RConf</h4>
+                    <p class="description">
+                        Реализация поддержки в Telegram
+                    </p>
+                </div>
+
+                <div class="card-footer">
+                    <span class="status-badge">Unknown</span>
+                    <span class="project-arrow" aria-hidden="true">↗</span>
                 </div>
             </a>
 
-            <a href="https://discord.com/oauth2/authorize?client_id=808277484524011531" target="_blank" rel="noopener noreferrer">
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <img src="assets/images/giveaway.png" alt="Giveaway" class="project-image">
-                    </div>
-                    <div class="project-info">
-                        <h4>Giveaway</h4>
-                        <p class="description">Discord бот для определения победителей.</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="status-badge">LTS</span>
-                    </div>
+            <a href="https://discord.com/oauth2/authorize?client_id=808277484524011531"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="project-card">
+
+                <div class="project-info">
+                    <h4>Giveaway</h4>
+                    <p class="description">
+                        Discord бот для определения победителей.
+                    </p>
+                </div>
+
+                <div class="card-footer">
+                    <span class="status-badge">LTS</span>
+                    <span class="project-arrow" aria-hidden="true">↗</span>
                 </div>
             </a>
 
-            <a href="https://discord.com/oauth2/authorize?client_id=845974873682608129" target="_blank" rel="noopener noreferrer">
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <img src="assets/images/hangman.png" alt="Hangman" class="project-image">
-                    </div>
-                    <div class="project-info">
-                        <h4>Hangman</h4>
-                        <p class="description">Discord бот для игры в Виселицу.</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="status-badge">LTS</span>
-                    </div>
+            <a href="https://discord.com/oauth2/authorize?client_id=845974873682608129"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="project-card">
+
+                <div class="project-info">
+                    <h4>Hangman</h4>
+                    <p class="description">
+                        Discord бот для игры в Виселицу.
+                    </p>
+                </div>
+
+                <div class="card-footer">
+                    <span class="status-badge">LTS</span>
+                    <span class="project-arrow" aria-hidden="true">↗</span>
                 </div>
             </a>
 
-            <a href="https://discord.com/oauth2/authorize?client_id=1039911109911658557" target="_blank" rel="noopener noreferrer">
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <img src="assets/images/noticeMe.png" alt="NoticeMe" class="project-image">
-                    </div>
-                    <div class="project-info">
-                        <h4>NoticeMe</h4>
-                        <p class="description">Discord бот для уведомлений.</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="status-badge">LTS</span>
-                    </div>
+            <a href="https://discord.com/oauth2/authorize?client_id=1039911109911658557"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="project-card">
+
+                <div class="project-info">
+                    <h4>NoticeMe</h4>
+                    <p class="description">
+                        Discord бот для уведомлений.
+                    </p>
+                </div>
+
+                <div class="card-footer">
+                    <span class="status-badge">LTS</span>
+                    <span class="project-arrow" aria-hidden="true">↗</span>
                 </div>
             </a>
+
         </div>
     </section>
 
     <section id="support" class="section support-section">
         <h3 class="section-title">Поддержать проекты</h3>
-        <p class="section-description">Если вам нравятся мои проекты и вы хотите поддержать их развитие, вы можете сделать это на Boosty.</p>
+
+        <p class="section-description">
+            Если вам нравятся мои проекты и вы хотите поддержать их развитие,
+            вы можете сделать это на Boosty.
+        </p>
+
         <div class="support-cards">
             <div class="support-card">
+
                 <div class="support-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                        2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
+                        C13.09 3.81 14.76 3 16.5 3
+                        19.58 3 22 5.42 22 8.5
+                        c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                     </svg>
                 </div>
+
                 <div class="support-details">
                     <h4>Boosty</h4>
                     <p>Подписка или разовый донат на Boosty</p>
                 </div>
-                <a href="https://boosty.to/megoru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-support">
+
+                <a href="https://boosty.to/megoru"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-primary btn-support">
                     Перейти
                 </a>
+
             </div>
         </div>
     </section>
 
     <section id="contacts" class="section">
         <h3 class="section-title">Контакты</h3>
+
         <div class="contacts-grid">
-            <a href="https://t.me/mego_RU" target="_blank" rel="noopener noreferrer" class="contact-card">
+
+            <a href="https://t.me/mego_RU"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-card">
                 <h4>Telegram</h4>
                 <p>@mego_RU</p>
             </a>
-            <a href="https://github.com/megoRU" target="_blank" rel="noopener noreferrer" class="contact-card">
+
+            <a href="https://github.com/megoRU"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-card">
                 <h4>GitHub</h4>
                 <p>@megoRU</p>
             </a>
+
         </div>
     </section>
+
 </main>
 
 <footer>
@@ -248,5 +313,6 @@
 </footer>
 
 <script src="js/main.js" defer></script>
+
 </body>
 </html>
