@@ -120,12 +120,7 @@ header {
 }
 
 .nav-container {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
     background: var(--nav-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--card-border);
     padding: 16px 24px;
     display: flex;
@@ -181,12 +176,6 @@ header {
     margin: 0 0 28px;
 }
 
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: center;
-}
 
 /* Buttons */
 .btn {
@@ -324,67 +313,6 @@ main {
     font-weight: 400;
 }
 
-.tech-stack {
-    margin-top: auto;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-/* Tooltip & Icons */
-.tech-icon-wrapper {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-}
-
-.tech-icon-wrapper:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.tooltip {
-    position: absolute;
-    top: calc(100% + 8px);
-    left: 0;
-    transform: translateY(-4px);
-    pointer-events: none;
-    background-color: var(--tooltip-bg-color);
-    color: var(--tooltip-text-color);
-    padding: 12px 14px;
-    border-radius: 12px;
-    font-size: 13px;
-    width: 260px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.15s ease, transform 0.15s ease;
-    box-shadow: var(--tooltip-shadow);
-    border: var(--tooltip-border);
-    z-index: 100;
-    display: grid;
-    grid-template-columns: 28px 1fr;
-    gap: 6px 10px;
-    align-items: start;
-}
-
-.tooltip img {
-    grid-row: span 2;
-}
-
-.tooltip strong {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--heading-color);
-}
-
-.tooltip p {
-    margin: 0;
-    font-size: 12px;
-    line-height: 1.4;
-    color: var(--description-color);
-}
 
 /* Card Footer & Badges */
 .card-footer {
