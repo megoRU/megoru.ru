@@ -38,27 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', updateNavState, { passive: true });
     }
 
-    // Scroll reveal via IntersectionObserver
-    const revealElements = document.querySelectorAll('[data-reveal]');
-    if ('IntersectionObserver' in window) {
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.12,
-            rootMargin: '0px 0px -40px 0px'
-        });
-
-        revealElements.forEach(el => revealObserver.observe(el));
-    } else {
-        // Fallback for older browsers: show everything
-        revealElements.forEach(el => el.classList.add('revealed'));
-    }
-
     // Fetch GitHub Stars for YetAnotherSSHClient
     async function fetchGitHubStars() {
         const starsBadge = document.getElementById('ssh-client-stars');
