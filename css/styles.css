@@ -509,12 +509,14 @@ main {
 .project-image-container {
     position: relative;
     width: 100%;
-    aspect-ratio: 402 / 211;
     overflow: hidden;
     background: rgba(0, 0, 0, 0.03);
+    padding-top: 52.49%; /* 211 / 402 ratio reserved before image loads */
 }
 
 .project-image {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -871,6 +873,15 @@ footer {
 @media (max-width: 768px) {
     .header-content {
         padding: 64px 20px 56px;
+    }
+
+    [data-reveal] {
+        animation: none;
+    }
+
+    .hero-actions {
+        animation: none;
+        opacity: 1;
     }
 
     .intro h1 {
