@@ -22,11 +22,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+
+<div class="bg-aurora" aria-hidden="true">
+    <div class="aurora-blob blob-one"></div>
+    <div class="aurora-blob blob-two"></div>
+    <div class="aurora-blob blob-three"></div>
+</div>
+<div class="bg-noise" aria-hidden="true"></div>
 
 <div class="nav-container">
     <nav class="nav-links" aria-label="Основная навигация">
@@ -73,169 +80,253 @@
 <header>
     <div class="header-content">
         <div class="intro">
-            <h1>Привет, я mego!</h1>
+            <h1>Привет, я <span class="gradient-text">mego!</span></h1>
             <p class="description">Java Backend Developer</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">Смотреть проекты</a>
+                <a href="#contacts" class="btn btn-outline">Связаться со мной</a>
+            </div>
         </div>
     </div>
 </header>
 
 <main>
 
-    <section id="projects" class="section">
+    <section id="projects" class="section" data-reveal>
         <h3 class="section-title">Мои проекты</h3>
 
-        <div id="projects-container" class="projects">
+        <div id="projects-container" class="projects-grid">
 
             <a href="https://github.com/megoRU/MicGainControl"
                target="_blank"
                rel="noopener noreferrer"
-               class="project-card">
+               class="project-card" data-reveal>
+
+                <div class="project-image-container">
+                    <img class="project-image" src="assets/images/micGainControl.png" alt="MicGainControl" loading="lazy">
+                </div>
 
                 <div class="project-info">
-                    <h4>MicGainControl</h4>
+                    <div class="project-header-title">
+                        <h4>MicGainControl</h4>
+                        <span class="status-badge">LTS</span>
+                    </div>
                     <p class="description">
                         Утилита для контроля уровня громкости микрофона в Windows
                     </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">C++</span>
+                    </div>
                 </div>
 
                 <div class="card-footer">
-                    <span class="status-badge">LTS</span>
+                    <span class="card-link">Смотреть на GitHub <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></span>
                 </div>
             </a>
 
             <a href="https://yetanothersshclient.ru"
                target="_blank"
                rel="noopener noreferrer"
-               class="project-card">
+               class="project-card featured" data-reveal>
+
+                <div class="project-image-container">
+                    <img class="project-image" src="assets/images/YetAnotherSSHClient.png" alt="YetAnotherSSHClient" loading="lazy">
+                </div>
 
                 <div class="project-info">
-                    <h4>YetAnotherSSHClient</h4>
+                    <div class="project-header-title">
+                        <h4>YetAnotherSSHClient</h4>
+                        <span class="github-stars-badge"
+                              id="ssh-client-stars"
+                              title="Звёзды на GitHub">
+                            <svg class="star-icon" width="14" height="14" viewBox="0 0 16 16"
+                                 fill="currentColor">
+                                <path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/>
+                            </svg>
+                            <span class="stars-count">...</span>
+                        </span>
+                        <span class="status-badge">LTS</span>
+                    </div>
                     <p class="description">
                         Простой и быстрый SSH клиент
                     </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Electron</span>
+                    </div>
                 </div>
 
                 <div class="card-footer">
-                    <span class="github-stars-badge"
-                          id="ssh-client-stars"
-                          title="Звёзды на GitHub">
-                        <svg class="star-icon" width="14" height="14" viewBox="0 0 16 16"
-                             fill="currentColor">
-                            <path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/>
-                        </svg>
-                        <span class="stars-count">...</span>
-                    </span>
-
-                    <span class="status-badge">LTS</span>
+                    <span class="card-link">Смотреть на GitHub <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></span>
                 </div>
             </a>
 
             <a href="https://megoru.ru"
                target="_blank"
                rel="noopener noreferrer"
-               class="project-card">
+               class="project-card" data-reveal>
+
+                <div class="project-image-container">
+                    <img class="project-image" src="assets/images/vpn.png" alt="VPN проект" loading="lazy">
+                </div>
 
                 <div class="project-info">
-                    <h4>Какой-то проект с VPN</h4>
+                    <div class="project-header-title">
+                        <h4>Какой-то проект с VPN</h4>
+                        <span class="status-badge">Confidential</span>
+                    </div>
                     <p class="description">
                         Телеграм бот
                     </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                    </div>
                 </div>
 
                 <div class="card-footer">
-                    <span class="status-badge">Confidential</span>
+                    <span class="card-link">Смотреть на GitHub <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></span>
                 </div>
             </a>
 
             <a href="https://t.me/scan_fit_bot"
                target="_blank"
                rel="noopener noreferrer"
-               class="project-card">
+               class="project-card" data-reveal>
+
+                <div class="project-image-container">
+                    <img class="project-image" src="assets/images/scanFit.jpg" alt="ScanFit" loading="lazy">
+                </div>
 
                 <div class="project-info">
-                    <h4>ScanFit</h4>
+                    <div class="project-header-title">
+                        <h4>ScanFit</h4>
+                        <span class="status-badge">Closed</span>
+                    </div>
                     <p class="description">
                         Telegram бот для расчета КБЖУ
                     </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                    </div>
                 </div>
 
                 <div class="card-footer">
-                    <span class="status-badge">Closed</span>
+                    <span class="card-link">Смотреть на GitHub <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></span>
                 </div>
             </a>
 
             <a href="https://rconf.ru"
                target="_blank"
                rel="noopener noreferrer"
-               class="project-card">
+               class="project-card" data-reveal>
+
+                <div class="project-image-container">
+                    <img class="project-image" src="assets/images/rconf.png" alt="RConf" loading="lazy">
+                </div>
 
                 <div class="project-info">
-                    <h4>RConf</h4>
+                    <div class="project-header-title">
+                        <h4>RConf</h4>
+                        <span class="status-badge">Unknown</span>
+                    </div>
                     <p class="description">
                         Реализация поддержки в Telegram
                     </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                    </div>
                 </div>
 
                 <div class="card-footer">
-                    <span class="status-badge">Unknown</span>
+                    <span class="card-link">Смотреть на GitHub <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></span>
                 </div>
             </a>
 
             <a href="https://discord.com/oauth2/authorize?client_id=808277484524011531"
                target="_blank"
                rel="noopener noreferrer"
-               class="project-card">
+               class="project-card" data-reveal>
+
+                <div class="project-image-container">
+                    <img class="project-image" src="assets/images/giveaway.png" alt="Giveaway" loading="lazy">
+                </div>
 
                 <div class="project-info">
-                    <h4>Giveaway</h4>
+                    <div class="project-header-title">
+                        <h4>Giveaway</h4>
+                        <span class="status-badge">LTS</span>
+                    </div>
                     <p class="description">
                         Discord бот для определения победителей.
                     </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                    </div>
                 </div>
 
                 <div class="card-footer">
-                    <span class="status-badge">LTS</span>
+                    <span class="card-link">Смотреть на GitHub <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></span>
                 </div>
             </a>
 
             <a href="https://discord.com/oauth2/authorize?client_id=845974873682608129"
                target="_blank"
                rel="noopener noreferrer"
-               class="project-card">
+               class="project-card" data-reveal>
+
+                <div class="project-image-container">
+                    <img class="project-image" src="assets/images/hangman.png" alt="Hangman" loading="lazy">
+                </div>
 
                 <div class="project-info">
-                    <h4>Hangman</h4>
+                    <div class="project-header-title">
+                        <h4>Hangman</h4>
+                        <span class="status-badge">LTS</span>
+                    </div>
                     <p class="description">
                         Discord бот для игры в Виселицу.
                     </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                    </div>
                 </div>
 
                 <div class="card-footer">
-                    <span class="status-badge">LTS</span>
+                    <span class="card-link">Смотреть на GitHub <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></span>
                 </div>
             </a>
 
             <a href="https://discord.com/oauth2/authorize?client_id=1039911109911658557"
                target="_blank"
                rel="noopener noreferrer"
-               class="project-card">
+               class="project-card" data-reveal>
+
+                <div class="project-image-container">
+                    <img class="project-image" src="assets/images/noticeMe.png" alt="NoticeMe" loading="lazy">
+                </div>
 
                 <div class="project-info">
-                    <h4>NoticeMe</h4>
+                    <div class="project-header-title">
+                        <h4>NoticeMe</h4>
+                        <span class="status-badge">LTS</span>
+                    </div>
                     <p class="description">
                         Discord бот для уведомлений.
                     </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                    </div>
                 </div>
 
                 <div class="card-footer">
-                    <span class="status-badge">LTS</span>
+                    <span class="card-link">Смотреть на GitHub <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></span>
                 </div>
             </a>
 
         </div>
     </section>
 
-    <section id="support" class="section support-section">
+    <section id="support" class="section support-section" data-reveal>
         <h3 class="section-title">Поддержать проекты</h3>
 
         <p class="section-description">
@@ -244,7 +335,7 @@
         </p>
 
         <div class="support-cards">
-            <div class="support-card">
+            <div class="support-card" data-reveal>
 
                 <div class="support-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -266,13 +357,14 @@
                    rel="noopener noreferrer"
                    class="btn btn-primary btn-support">
                     Перейти
+                    <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
                 </a>
 
             </div>
         </div>
     </section>
 
-    <section id="contacts" class="section">
+    <section id="contacts" class="section" data-reveal>
         <h3 class="section-title">Контакты</h3>
 
         <div class="contacts-grid">
@@ -280,7 +372,10 @@
             <a href="https://t.me/mego_RU"
                target="_blank"
                rel="noopener noreferrer"
-               class="contact-card">
+               class="contact-card" data-reveal>
+                <div class="contact-icon">
+                    <img src="assets/icons/telegram.svg" alt="Telegram" width="24" height="24">
+                </div>
                 <h4>Telegram</h4>
                 <p>@mego_RU</p>
             </a>
@@ -288,7 +383,10 @@
             <a href="https://github.com/megoRU"
                target="_blank"
                rel="noopener noreferrer"
-               class="contact-card">
+               class="contact-card" data-reveal>
+                <div class="contact-icon">
+                    <img src="assets/icons/github.svg" alt="GitHub" width="24" height="24">
+                </div>
                 <h4>GitHub</h4>
                 <p>@megoRU</p>
             </a>
@@ -300,7 +398,7 @@
 
 <footer>
     <div class="footer-content">
-        <p>© 2026 megoRU. Все права защищены.</p>
+        <p>© 2026 megoRU</p>
     </div>
 </footer>
 
