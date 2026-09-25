@@ -2,6 +2,72 @@
    mego portfolio — graphite / lime visual system
    ===================================================================== */
 
+/* ---------- Fonts ----------
+   Inter и JetBrains Mono лежат локально (латиница + кириллица), поэтому
+   первая отрисовка не зависит от fonts.googleapis.com.
+
+   Семейства *-fallback подобраны по метрикам (size-adjust / ascent-override /
+   descent-override): пока настоящий шрифт грузится, браузер рисует текст
+   локальным шрифтом, занимающим ровно то же место, поэтому подмена шрифта не
+   вызывает reflow. В браузерах без поддержки дескрипторов (Safari < 16.4,
+   Firefox < 89) они просто игнорируются — вёрстка не ломается. */
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("../assets/fonts/inter-latin.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("../assets/fonts/inter-cyrillic.woff2") format("woff2");
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("../assets/fonts/jetbrains-mono-latin.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("../assets/fonts/jetbrains-mono-cyrillic.woff2") format("woff2");
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: "Inter Fallback";
+    src: local("Arial"), local("Helvetica"), local("Liberation Sans"), local("Arimo");
+    font-weight: 100 900;
+    size-adjust: 105.21%;
+    ascent-override: 92.1%;
+    descent-override: 22.91%;
+    line-gap-override: 0%;
+}
+
+@font-face {
+    font-family: "JetBrains Mono Fallback";
+    src: local("Consolas"), local("Menlo"), local("Cascadia Mono"), local("DejaVu Sans Mono"), local("Liberation Mono");
+    font-weight: 100 800;
+    size-adjust: 112.7%;
+    ascent-override: 90.5%;
+    descent-override: 26.62%;
+    line-gap-override: 0%;
+}
+
 :root {
     color-scheme: dark;
 
@@ -46,8 +112,8 @@
     --max-width: 1180px;
     --topbar-height: 62px;
 
-    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+    --font-sans: "Inter", "Inter Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, "SFMono-Regular", Consolas, monospace;
 
     --ease: cubic-bezier(0.2, 0.7, 0.3, 1);
     --duration-fast: 120ms;
@@ -429,7 +495,7 @@ html[data-theme="auto"] .theme-icon--auto {
 }
 
 .hero-copy h1 {
-    max-width: 12ch;
+    max-width: 8.09em; /* = 12ch в Inter 700; em не зависит от шрифта, поэтому подмена не переносит строки */
     margin: 0;
     font-size: clamp(46px, 5.5vw, 68px);
     font-weight: 700;
@@ -443,7 +509,7 @@ html[data-theme="auto"] .theme-icon--auto {
 }
 
 .hero-lead {
-    max-width: 62ch;
+    max-width: 39.1em; /* = 62ch в Inter 400 */
     margin: 24px 0 0;
     color: var(--text-muted);
     font-size: 14px;
@@ -622,7 +688,9 @@ html[data-theme="auto"] .theme-icon--auto {
 }
 
 .best-project__body > p {
-    min-height: 42px;
+    /* 2 строки: 2 * 14px * 1.65 = 46.2px. Резерв держит высоту, даже если
+       fallback-шрифт уложит текст в одну строку. */
+    min-height: 46px;
     margin: 9px 0 18px;
     color: var(--text-muted);
     font-size: 14px;
@@ -840,7 +908,7 @@ html[data-theme="auto"] .theme-icon--auto {
 }
 
 .project-body > p {
-    min-height: 44px;
+    min-height: 46px; /* 2 строки, см. .best-project__body > p */
     margin: 10px 0 20px;
     color: var(--text-muted);
     font-size: 14px;
@@ -911,6 +979,13 @@ html[data-theme="auto"] .theme-icon--auto {
     flex: 0 0 12px;
     align-self: center;
     fill: currentColor;
+}
+
+/* Счётчик звёзд приходит из API, поэтому место под него резервируем заранее:
+   «—» и «123» не должны сдвигать флекс-контейнер. */
+.stars-count {
+    min-width: 1.8em;
+    text-align: right;
 }
 
 /* ---------- Sidebar ---------- */
