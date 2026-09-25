@@ -419,7 +419,6 @@ html[data-theme="auto"] .theme-icon--auto {
 
 .hero-copy {
     max-width: 720px;
-    animation: fade-up var(--duration-slow) var(--ease) both;
 }
 
 .section-kicker {
@@ -525,7 +524,6 @@ html[data-theme="auto"] .theme-icon--auto {
     border-radius: var(--radius-lg);
     background: var(--surface-1);
     box-shadow: var(--shadow-md);
-    animation: card-in var(--duration-slow) 80ms var(--ease) both;
     transition: border-color var(--duration) var(--ease),
                 box-shadow var(--duration) var(--ease);
 }
@@ -1070,28 +1068,6 @@ html[data-theme="auto"] .theme-icon--auto {
 }
 
 /* ---------- Motion ---------- */
-
-@keyframes fade-up {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes card-in {
-    from {
-        opacity: 0;
-        transform: translateY(8px) scale(0.99);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
 
 @media (prefers-reduced-motion: reduce) {
     *,
